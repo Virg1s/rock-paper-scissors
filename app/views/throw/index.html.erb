@@ -1,0 +1,14 @@
+<h1>WELCOME TO <%= @game_name %></h1>
+
+<p><%= @bets.map(&:camelize).join(' ') %>  is a zero sum game that is usually played by two people using their hands and no tools. The idea is to make shapes with an outstretched hand where each shape will have a certain degree of power and will lead to an outcome.</p>
+
+<h4>Rules:</h4>
+<% @rule_description.each do |rule| %>
+  <p><%= rule %></p>
+<% end %>
+
+<h4>Select your bet:</h4>
+<% @bets.each do |bet| %>
+  <%= link_to bet.camelize, result_path(throw: bet) %>
+<% end %>
+
