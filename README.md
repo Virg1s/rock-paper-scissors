@@ -11,3 +11,5 @@ To run:
 - run 'rails s'
 - in your browser go to 'http://localhost:3000/throw'
 
+Rules can be modified in .app/controllers/throw_controller.rb.
+The instructions for modifications are contained in the file.
